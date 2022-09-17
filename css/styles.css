@@ -1,0 +1,250 @@
+/* style on body */
+body {
+  text-align: center;
+  background-color: #283149;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* style on drummer sprite sheet */
+.drummer{
+  background-image: url(../images/drummer_sprite_sheet.png);
+  width: 204.5px;
+  height: 160.333px;
+  margin-top: 3em;
+  animation: playX 1s steps(4) infinite,
+             playY 3s steps(3) infinite;
+  margin: auto;
+}
+
+/* animation on drummer sprite sheet  */
+@keyframes playX {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 818px;
+  }
+}
+
+@keyframes playY {
+  0% {
+    background-position-y: 0;
+  }
+  100%{
+    background-position-y: 481px;
+  }
+}
+
+/* style on card */
+.card{
+  height: 60px;
+  width: 400px;
+  background-color: #DBEDF3;
+  color: #DA0463;
+  margin: auto;
+  text-align: center;
+  line-height: 60px;
+  box-shadow: 0 5px 8px 0 #000;
+}
+
+.card p{
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+/* style on let's play link */
+.lets-play p{
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.lets-play a{
+  text-decoration: none;
+  color: #DBEDF3;
+  margin-left: 17em;
+  text-shadow: 2px 2px #000;
+}
+
+.lets-play span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.lets-play span:after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.lets-play:hover span {
+  padding-right: 25px;
+}
+
+.lets-play:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* style on h1 and h2 */
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #DA0463;
+  text-shadow: 1px 0 #DBEDF3;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink{
+  animation: blink 0.5s ;
+}
+
+/* style on drum texts */
+.w {
+  background-image: url("../images/tom1.png");
+}
+
+.a {
+  background-image: url("../images/tom2.png");
+}
+
+.s {
+  background-image: url("../images/tom3.png");
+}
+
+.d {
+  background-image: url("../images/tom4.png");
+}
+
+.j {
+  background-image: url("../images/snare.png");
+}
+
+.k {
+  background-image: url("../images/crash.png");
+}
+
+.l {
+  background-image: url("../images/kick.png");
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+
+}
+
+.red {
+  color: red;
+}
+
+/* style on drums */
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}
+
+.drum:hover{
+  cursor: pointer;
+}
+
+/* style on footer section */
+.footer{
+  color: #DBEDF3;
+  padding-top: 5em;
+}
+
+.set{
+  display: flex;
+  justify-content: center;
+}
+
+/* all media queries */
+@media only screen and (max-width: 1250px) {
+  .drum{
+    font-size: 4rem;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .set{
+    flex-direction: column;
+  }
+
+  .first-flex{
+    width: 100%;
+  }
+  .second-flex{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 4em;
+  }
+  h2{
+    font-size: 1.4em;
+  }
+  .card{
+    height: 40px;
+    width: 300px;
+    line-height: 40px;
+  }
+  .card p{
+    font-size: 1.4em;
+  }
+  .lets-play a{
+    margin-left: 12em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1{
+    font-size: 3em;
+  }
+  h2{
+    font-size: 0.8em;
+  }
+  .card{
+    height: 30px;
+    width: 200px;
+    line-height: 30px;
+  }
+  .card p{
+    font-size: 1em;
+  }
+  .lets-play a{
+    margin-left: 8em;
+  }
+}
